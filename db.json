@@ -1,0 +1,28 @@
+{
+  "taskdets": [
+    {
+      "id": 1,
+      "task": "Build UI HTML pages",
+      "ptask": "UI",
+      "priority": 5,
+      "sdate": "05/01/2019",
+      "edate": "06/01/2019"
+    },
+    {
+      "id": 2,
+      "task": "Build UI typescript",
+      "ptask": "UI",
+      "priority": 5,
+      "sdate": "05/01/2019",
+      "edate": "06/01/2019"
+    },
+    {
+      "id": 3,
+      "task": "Write UI jasmine unit testing",
+      "ptask": "UI",
+      "priority": 5,
+      "sdate": "05/01/2019",
+      "edate": "06/01/2019"
+    }
+  ]
+}
