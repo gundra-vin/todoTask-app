@@ -1,11 +1,11 @@
 export class Taskdet {
     tid: number = null;
-    task: string = ' ';
-    ptask: string = ' ';
+    task = ' ';
+    ptask = ' ';
     priority: number = null;
-    sdate: string = ' ';
-    edate: string = ' ';
-    constructor(values: object = {}){
+    sdate = ' ';
+    edate = ' ';
+    constructor(values: object = { }) {
 
     }
 }
