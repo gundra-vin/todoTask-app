@@ -10,30 +10,26 @@ import { TodoserviceService } from 'src/app/todoservice.service';
 export class UpdatetaskComponent implements OnInit {
 
 
- sucessmsg : string ="";
+ sucessmsg: string ='';
   @Input()
-  updtask : Taskdet;
+  updtask: Taskdet;
    
-  constructor(private todoService : TodoserviceService) { }
+  constructor(private todoService: TodoserviceService) { }
 
   ngOnInit() {
   }
 
-  updTask(updtask){
+  updTask(updtask) {
     console.log(updtask);
    this.todoService.updTask(updtask).subscribe(msg =>{
     console.log(msg);
-    this.sucessmsg = "Task Id: " +msg.tid +" Got updated successfully";
+    this.sucessmsg = 'Task Id: ' +msg.tid +' Got updated successfully';
   });
-
   }
-  resTask(){
+  resTask() {
     this.updtask = new Taskdet();
-    this.sucessmsg = "";
+    this.sucessmsg = '';
   }
- 
-
-
   }
 
 

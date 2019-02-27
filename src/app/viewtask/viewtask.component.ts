@@ -8,35 +8,30 @@ import { Taskdet } from 'src/app/taskdet';
   styleUrls: ['./viewtask.component.css']
 })
 export class ViewtaskComponent implements OnInit {
-  taskdets : Taskdet[] = [];
-  updet : Taskdet = new Taskdet();
+  taskdets: Taskdet[] = [];
+  updet: Taskdet = new Taskdet();
  
-  constructor(private todoService : TodoserviceService) {
+  constructor(private todoService: TodoserviceService) {
     this.todoService.getallTasks().subscribe(taskdets => {
-      this.taskdets = taskdets;
-     
-    
+      this.taskdets = taskdets;     
     });
   }
 
   ngOnInit() {
   }
-getallTasks(){
+getallTasks() {
   this.todoService.getallTasks().subscribe(taskdets => {
-    this.taskdets = taskdets;
-    
+    this.taskdets = taskdets;    
   });
 }
-  updTask(tsk){
-    
+  updTask(tsk) {    
     this.updet = tsk;
   }
-  delTask(deltask : Taskdet){
+  delTask(deltask: Taskdet) {
     console.log(deltask);
     this.todoService.delTask(deltask).subscribe(res =>{
       console.log(res);
       this.taskdets = res;
     });
-  }
-  
+  }  
 }

@@ -10,24 +10,22 @@ const API_URL = environment.apiUrl;
 })
 export class TodoserviceService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  public addTask(tsk){
-    
+  public addTask(tsk) {    
     return this.http.post<Taskdet>(API_URL, tsk).pipe(map(response => response));
   }
 
-  public updTask(tsk){
+  public updTask(tsk) {
     return this.http.put<Taskdet>(API_URL, tsk).pipe(response => response);
   }
 
-  public getallTasks(){
+  public getallTasks() {
     return this.http.get<any[]>(API_URL).pipe(map(data => data));
   }
  
-  public delTask(tsk){
-   
-    return this.http.delete<any[]>(API_URL + "/" + tsk.tid).pipe(map(response => response));
+  public delTask(tsk) {   
+    return this.http.delete<any[]>(API_URL + '/' + tsk.tid).pipe(map(response => response));
   }
 
 }
