@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { ViewtaskComponent } from './viewtask/viewtask.component';
 import { UpdatetaskComponent } from './updatetask/updatetask.component';
+import { TaskSearchPipe } from 'src/app/task-search-pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddtaskComponent,
     ViewtaskComponent,
-    UpdatetaskComponent
+    UpdatetaskComponent,
+    TaskSearchPipe
   ],
   imports: [
     BrowserModule,
